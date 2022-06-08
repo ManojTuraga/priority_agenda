@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<link rel="stylesheet" href="../static/css/task_form_edit.css">
+{% endblock %}
+
+{% block body %}
+<div id="container">
+	<h1 id="header">Priority Agenda</h1>
+	<div id="tasks_div">
+	<form id="task_form" method="POST">
+	{% for task in tasks %}
+	<label class="labl">
+		<input type="radio" name="index" value="{{task[0]}}"/>
+		<div>{{task[1].get_title()}}; (Due:{{task[1].get_due_date()}}, Created:{{task[1].get_date_created()}}); Weight:{{task[1].get_weight()}}</div>
+	</label>
+	{% endfor %}
+	</form>
+	</div>
+</div>
+{% if tasks|length == 0 %}
+<button form="task_form" name="submit" value="delete" class="button button1" disabled>Delete</button>
+<button form="task_form" name="submit" value="edit" class="button button2" disabled>Edit</button>
+{% else %}
+<button form="task_form" name="submit" value="delete" class="button button1">Delete</button>
+<button form="task_form" name="submit" value="edit" class="button button2">Edit</button>
+{% endif %}
+<button form="task_form" name="submit" value="back" class="button button3">Back</button>
+<!--<script>
+	var i = window.innerWidth;
+	var j = window.innerHeight;
+	document.getElementById("container").style.width = i.toString()+'px';
+	document.getElementById("container").style.height = j.toString()+'px';
+	document.getElementById("container").style.position = 'relative';
+	
+</script>-->
+{% endblock %}

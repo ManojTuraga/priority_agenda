@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<link rel="stylesheet" href="../static/css/task.css">
+{% endblock %}
+
+{% block body %}
+<div id="container">
+	<h1 id="header">Priority Agenda</h1>
+	<p id="info">We have decided your most important task is</p>
+	
+	{% if state == "False" %}
+		<p class="my_task" id="my_task">Nothing<p>
+	{% else %}
+	<div id="task_div">
+		<p class="my_task" id="my_task">{{task.get_title()}}</p>
+		<p id="date">Date Due: {{task.get_due_date()}}</p>
+		<p id="task_info">{{task.get_info()}}</p>
+	</div>
+	{% endif %}
+	
+	<form id="buttonform" method="POST">
+	</form>
+		
+	<button form="buttonform" class="button button1" name="submit" value="add">Add Task</button>
+	<button form="buttonform" class="button button2" name="submit" value="edit">Edit Tasks</button>
+	<button form="buttonform" class="button button3" name="submit" value="logout">Log Out</button>
+</div>
+	
+	<!--<script>
+		var i = window.innerWidth;
+		var j = window.innerHeight;
+		document.getElementById("container").style.width = i.toString()+'px';
+		document.getElementById("container").style.height = j.toString()+'px';
+		document.getElementById("container").style.position = 'relative';
+	</script>-->
+{% endblock %}

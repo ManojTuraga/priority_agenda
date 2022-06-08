@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<link rel="stylesheet" href="../static/css/home.css">
+{% endblock %}
+{% block body %}
+	<div id="container">
+		<h2 id="homepageh2">Priority Agenda</h2>
+		<form action="/" method="POST" id="buttonform">
+		</form>
+		<button form="buttonform" class="button button1" name="submit" value="login">Login</button>
+		<button form="buttonform" class="button button2" name="submit" value="signup">Sign Up</button>
+		<button form="buttonform" class="button button3" name="submit" value="about">About</button>
+	</div>
+	<!--<script>
+		var i = window.innerWidth;
+		var j = window.innerHeight;
+		document.getElementById("container").style.width = i.toString()+'px';
+		document.getElementById("container").style.minHeight = j.toString()+'px';
+		document.getElementById("container").style.minHeight = j.toString()+'px !important';
+		document.getElementById("container").style.position = 'relative';
+	</script>-->
+{% endblock %}

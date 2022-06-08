@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<link rel="stylesheet" href="../static/css/about.css">
+{% endblock %}
+
+{% block body %}
+<div id="container">
+	<h1 id="header">Priority Agenda</h1>
+	<p id="info">
+		This program utilizes a Node-Based Binary Search Tree to house accounts that are created for this site.
+		Each account contains a List-Based Maxheap that will present the most imporant item to complete.
+		The most important item is calculated by comparing the due dates, then the date the task was created, and a user given "weight" for the task in that order.
+	</p>
+	<form id="buttonform" action="/about" method="POST">
+	</form>
+	<button form="buttonform" class="button" name="submit" value="back">Back</button>
+</div>
+<!--<script>
+	var i = window.innerWidth;
+	var j = window.innerHeight;
+	document.getElementById("container").style.width = i.toString()+'px';
+	document.getElementById("container").style.height = j.toString()+'px';
+	document.getElementById("container").style.position = 'relative';
+</script>-->
+{% endblock %}

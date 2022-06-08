@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<link rel="stylesheet" href="../static/css/task_form_edit_page.css">
+{% endblock %}
+
+{% block body %}
+<div id="container">
+<h1 id="header">Priority Agenda</h1>
+<h2 id="sub_header">Edit Task</h2>
+<form method="POST" id="submission">
+		<p id="title_label" class="label">Title:</p>
+		<input type="text" id="title" name="title" value="{{task.get_title()}}">
+		<p id="info_label" class="label">Info:</p>
+		<textarea id="info" name="info" cols="40" rows="5">{{task.get_info()}}</textarea>
+		{% if state1 == "True" %}
+			<p id="due_date_label" class="label">Due Date (mm/dd/yyyy):</p>
+		{% else %}
+			<p id="due_date_label" class="label">Due Date (mm/dd/yyyy): Invalid Date Entered</p>
+		{% endif %}
+		<input type="text" id="due_date" name="due_date" value="{{task.get_due_date()}}">
+		{% if state2 == "True" %}
+			<p id="weight_label" class="label">Weight (1-100):</p>
+		{% else %}
+			<p id="weight_label" class="label">Weight (1-100): Invalid value</p>
+		{% endif %}
+		<input type="text" id="weight" name="weight" value="{{task.get_weight()}}">
+		<input type="submit" value="Submit" id="submit" class="button button2" name = "submit2">
+</form>
+<button form="submission" class="button button1" name="submit2" value="back">Back</button>
+</div>
+<!--<script>
+	var i = window.innerWidth;
+	var j = window.innerHeight;
+	document.getElementById("container").style.width = i.toString()+'px';
+	document.getElementById("container").style.height = j.toString()+'px';
+	document.getElementById("container").style.position = 'relative';
+</script>-->
+{% endblock %}

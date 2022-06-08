@@ -1,0 +1,85 @@
+#header
+{
+	position: absolute;
+	top: 0.5vh;
+	text-align: right;
+	padding-right: 2vw;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7vh;
+	width: 100%;
+}
+#info
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 3.25vh;
+	position: absolute;
+	top: 12vh;
+	width: 100%;
+	text-align: center;
+	
+}
+.my_task
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7vh;
+	position: absolute;
+	top: 13vh;
+	width: 100%;
+	text-align: center;
+}
+#date
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 3.2vh;
+	font-style: italic;
+	position: absolute;
+	top: 27vh;
+	width: 100%;
+	text-align: center;
+}
+#task_info
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 3.2vh;
+	font-style: italic;
+	font-weight: bold;
+	position: absolute;
+	top: 33vh;
+	width: 100%;
+	text-align: center;
+}
+.button
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 2vw;
+	border: solid;
+	background-color: white;
+	width: 15vw;
+	height: 15vh;
+	position: absolute;
+
+}
+.button:hover
+{
+	background-color: black;
+	border-color: white;
+	color: white;
+}
+.button1
+{
+	top: 65vh;
+	left: 12vw;
+}
+.button2
+{
+	top: 65vh;
+	right: 12vw;
+}
+.button3
+{
+	top: 65vh;
+	left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+}

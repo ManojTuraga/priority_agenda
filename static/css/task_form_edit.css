@@ -1,0 +1,82 @@
+#header
+{
+	position: absolute;
+	top: 0.5vh;
+	text-align: right;
+	padding-right: 2vw;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7vh;
+	width: 100%;
+}
+#tasks_div
+{
+	position: absolute;
+    left: 5vw;
+	top: 20vh;
+	overflow: auto !important;
+	width: 60vw;
+	height: 60vh;
+	border-style: solid;
+}
+.labl 
+{
+    display : block;
+    width: 100%;
+}
+.labl > input
+{ 
+    visibility: hidden; 
+    position: absolute; 
+}
+.labl > input + div
+{
+    cursor:pointer;
+	text-align: center;
+	height: 7%;
+	width: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 3vh;
+}
+.labl > input:checked + div
+{
+    background-color: black !important;
+	color: white !important;
+}
+.labl > input:hover + div
+{
+    background-color: #ADD8E6;
+	color: grey;
+}
+.button
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 2vw;
+	border: solid;
+	background-color: white;
+	width: 15vw;
+	height: 15vh;
+	position: absolute;
+
+}
+.button:hover
+{
+	background-color: black;
+	border-color: white;
+	color: white;
+}
+.button1
+{
+	top: 22vh;
+	right: 8vw;
+}
+.button2
+{
+	top: 44vh;
+	right: 8vw;
+}
+.button3
+{
+	top: 66vh;
+	right: 8vw;
+}

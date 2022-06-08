@@ -1,0 +1,43 @@
+#homepageh2
+{
+	position: absolute;
+	top: 18vh;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7vh;
+	width:100vw;
+}
+.button
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 2vw;
+	border: solid;
+	background-color: white;
+	width: 15vw;
+	height: 15vh;
+	position: absolute;
+
+}
+.button:hover
+{
+	background-color: black;
+	border-color: white;
+	color: white;
+}
+.button1
+{
+	top: 65vh;
+	left: 12vw;
+}
+.button2
+{
+	top: 65vh;
+	right: 12vw;
+}
+.button3
+{
+	top: 65vh;
+	left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<link rel="stylesheet" href="../static/css/signup.css">
+{% endblock %}
+
+{% block body %}
+<div id="container">
+	<h1 id="header">Priority Agenda</h1>
+	{% if state == "True" %}
+	<h1 id="s_header">Signup</h1>
+	{% elif state == "False1" %}
+	<h1 id="s_header">Invalid Username or Password</h1>
+	{% else %}
+	<h1 id="s_header">Account Already Exists, Try Again</h1>
+	{% endif %}
+	
+	<form action="/signup/confirmation" method="POST" id="submission">
+		<p id="username_label">User Name:</p>
+		<input type="text" id="username" name="username"><br>
+		<p for="pswd" id="pswd_label">Password:</p>
+		<input type="text" id="pswd" name="pswd"><br><br>
+		<input type="submit" value="Submit" id="submit" class="button button2" name = "submit">
+	</form>
+	<button form="submission" class="button button1" name="submit" value="back">Back</button>
+</div>
+<!--<script>
+	var i = window.innerWidth;
+	var j = window.innerHeight;
+	document.getElementById("container").style.width = i.toString()+'px';
+	document.getElementById("container").style.height = j.toString()+'px';
+	document.getElementById("container").style.position = 'relative';
+</script>-->
+{% endblock %}
