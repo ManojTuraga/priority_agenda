@@ -4,12 +4,20 @@
 	<link rel="stylesheet" href="../static/css/home.css">
 {% endblock %}
 {% block body %}
-	<div id="container">
-		<h2 id="homepageh2">Priority Agenda</h2>
 		<form action="/" method="POST" id="buttonform">
 		</form>
-		<button form="buttonform" class="button button1" name="submit" value="login">Login</button>
-		<button form="buttonform" class="button button2" name="submit" value="signup">Sign Up</button>
+	<div id="info">
+		<h1 id="intro">Schedule your tasks better.</h1>
+		<p id="answer">Instead of using agendas and calendars to keep track of the things you need to do, we automatically determine the task of highest priority.</p>
+		<button id="signupnow" form="buttonform" name="submit" value="signup">Sign up for free</button>
+	</div>
+	<div id="image">
+		<img src="../static/images/notebook.png" style='height: 100%; width: 100%; object-fit: contain'>
+	</div>
+	<div id="navbar">
+		<h2><span id="homepageh2">Priority Agenda</span></h2>
+		<button form="buttonform" class="button button2" name="submit" value="login">Login</button>
+		<button form="buttonform" class="button button1" name="submit" value="signup">Sign Up</button>
 		<button form="buttonform" class="button button3" name="submit" value="about">About</button>
 	</div>
 	<!--<script>

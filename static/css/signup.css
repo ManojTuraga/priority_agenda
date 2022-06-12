@@ -44,6 +44,17 @@
 #pswd
 {
 	top: 47vh;
+	width: 30vw;
+	display: inline-block;
+	padding: 1.5vh;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+	font-size: 2vh;
 }
 input[type=text]{
 	width: 30vw;

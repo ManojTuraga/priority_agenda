@@ -192,20 +192,29 @@ def edittask():
         try:
             strptime(request.form.get("due_date"), "%m/%d/%Y")
         except:
-            return render_template('task_form_edit_page.html', state1 = "False", state2 = "True")
+            return render_template('task_form_edit_page.html', task=user_account.get_tasks()[session["index"]], state1 = "False", state2 = "True")
 
         try:
             if not (1 <= int(request.form.get("weight")) <= 100):
                 raise RuntimeError
 
         except:
-            return render_template('task_form_edit_page.html', state1 = "True", state2 = "False")
+            return render_template('task_form_edit_page.html', task=user_account.get_tasks()[session["index"]], state1 = "True", state2 = "False")
 
         task = user_account.get_tasks()[session["index"]]
         task.set_title(request.form.get("title"))
         task.set_info(request.form.get("info"))
         task.set_due_date(request.form.get("due_date"))
         task.set_weight(int(request.form.get("weight")))
+
+        tasks = user_account.get_tasks()
+
+        temp = MaxHeap()
+
+        for task in tasks:
+            temp.add(task)
+
+        user_account.set_tasks(temp)
 
         session.pop("index")
 
@@ -218,5 +227,4 @@ if __name__ == '__main__':
     x = threading.Thread(target=store)
     x.start()
     load()
-    if 'liveconsole' not in gethostname():
-        app.run()
+    app.run(host='0.0.0.0', port="4999")
