@@ -227,4 +227,4 @@ if __name__ == '__main__':
     x = threading.Thread(target=store)
     x.start()
     load()
-    app.run(host='0.0.0.0', port="4999")
+    app.run(host='0.0.0.0')
