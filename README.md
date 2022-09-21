@@ -1,5 +1,5 @@
 # Priority Agenda
-This ia a Web Application that allows a user to store the tasks that they have to do. Tasks are stored in a Priority Queue and each account that is created will have their own Priority Queue. Developed using Python/Flask for the backend and HTML/CSS for the frontend
+This ias a Web Application that allows a user to store the tasks that they have to do. Tasks are stored in a Priority Queue and each account that is created will have their own Priority Queue. Developed using Python/Flask for the backend and HTML/CSS for the frontend
 ## Prerequisites
 This code requires Python3 and the relevant Flask libraries. Just pip install -r requirements.txt and that should download the relevant Flask and Jinja2 Libraries
 ## Running the Code
