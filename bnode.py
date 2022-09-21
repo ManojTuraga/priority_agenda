@@ -1,12 +1,3 @@
-'''
-Author: Manoj Turaga
-KUID: 3056848
-Date: 04/20/2022
-Lab: lab09
-Last modified: 04/30/2022
-Purpose: Program is an implementation of the Binary Node class, which creates a Binary Node object
-'''
-
 class BNode:
     def __init__(self, entry):
         """Function initializes a BNode object with an entry, left child, and right child."""
